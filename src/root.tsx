@@ -4,9 +4,12 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
 
-import "./global.css";
+import { RouterHead } from "~/components/router/head";
+
+import "~/styles/reset.css";
+import "~/styles/global.css";
+import "~/styles/fonts.css";
 
 export default component$(() => {
   /**
@@ -24,7 +27,10 @@ export default component$(() => {
         <RouterHead />
         <ServiceWorkerRegister />
       </head>
-      <body lang="en">
+      <body
+        lang="en"
+        class="font-sans color-zinc-900 bg-zinc-50 dark:color-zinc-100 dark:bg-zinc-950"
+      >
         <RouterOutlet />
       </body>
     </QwikCityProvider>
